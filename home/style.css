@@ -1,0 +1,764 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #106EBE;
+    /* color: #333; */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #0A4A74;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+}
+
+/* Logo */
+.logo h1 {
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    font-weight: 900;
+    font-size: 2em;
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.logo h1:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Links */
+.nav_link {
+    text-decoration: none;
+    margin-left: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav_link:hover {
+    color: #F42B03;
+}
+
+.nav_link:active {
+    color: #EC7505;
+}
+
+/* Navigation Buttons */
+.nav_button {
+    display: flex;
+    margin-left: 40px;
+}
+
+.nav_button-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #F42B03;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-left: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav_button-link:hover {
+    background-color: #EC7505;
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #106EBE;
+    background: linear-gradient(135deg, #106EBE, #0A4A74);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1000px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Animation for Heading */
+.animated-heading {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Animation for Subheading */
+.animated-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #D1E8FF;
+    opacity: 0;
+    animation: fadeInUp 1.4s ease-out forwards;
+}
+
+/* Animation for Button */
+.animated-button {
+    text-decoration: none;
+    background-color: #F42B03;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1.6s ease-out forwards;
+}
+
+/* Button Hover Effect */
+.cta-button:hover {
+    background-color: #EC7505;
+    transform: scale(1.05);
+}
+
+/* Fade In and Slide Up Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Start below */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* End at normal position */
+    }
+}
+
+
+/* Section 2 - Why Choose Us */
+.why-choose-us {
+    height: auto;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #106EBE;
+    background: linear-gradient(135deg, #106EBE, #0A4A74);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Title */
+.section-title {
+    display: block;
+    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.884);
+}
+
+.sub-text {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    color: #fff;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Features Cards */
+.features {
+    padding: 0px 180px 0px 180px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+/* Individual Feature Card */
+.feature-card {
+    background: #EC7505;
+    color: #FFF;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.feature-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #FFF;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #F42B03;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #106EBE;
+    background: linear-gradient(135deg, #106EBE, #0A4A74);
+    color: #FFFFFF;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Steps Layout */
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+/* Individual Step */
+.step {
+    background-color: #EC7505;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.step:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.step:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Step Icon */
+.step-icon {
+    font-size: 3rem;
+    color: #F42B03;
+    margin-bottom: 20px;
+}
+
+/* Step Title */
+.step h3 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* Step Description */
+.step p {
+    font-size: 1rem;
+    color: #ffffffdc;
+    line-height: 1.5;
+}
+
+/* Fade In and Slide Up Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Start below */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* End at normal position */
+    }
+}
+
+
+
+/* Section 3 - Our Templates */
+.section-3 {
+    background-color: #106EBE;
+    background: linear-gradient(135deg, #106EBE, #0A4A74);
+    text-align: center;
+    height: auto;
+    padding: 60px 50px;
+}
+
+
+.img-sliders {
+    margin-top: 30px;
+    display: flex;
+    justify-content:space-evenly;
+    gap: 30px;
+}
+
+.slider-container {
+    width: 30%;
+    height: 580px;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    animation: slide 16s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex: 1 0 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.slider-button {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background-color: #16a085;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-button:hover {
+    background-color: #1abc9c;
+}
+
+.view-all {
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    color: #fff;
+    background-color: #F42B03;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.view-all:hover {
+    background-color: #EC7505;
+    transition: color 0.3s ease;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-100%);
+    }
+
+    45% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+
+    70% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-300%);
+    }
+
+    95% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Testimonial Section */
+.testimonials {
+    background-color: #106EBE;
+    background: linear-gradient(135deg, #106EBE, #0A4A74);
+    color: #0A4A74;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Testimonial Cards Layout */
+.testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Individual Testimonial Card */
+.testimonial-card {
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 300px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial Card Text */
+.testimonial-card p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #0A4A74;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Name of Testimonial Giver */
+.testimonial-card h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #106EBE;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Animation Delays for Testimonials */
+.testimonial-card:nth-child(2) p {
+    animation-delay: 0.3s;
+}
+
+.testimonial-card:nth-child(3) p {
+    animation-delay: 0.6s;
+}
+
+/* Fade In and Slide Up Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Quote Container
+.quote-container {
+    background: linear-gradient(135deg, #1d976c, #93f9b9);
+    width: 35%;
+    padding: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.quote-slider {
+    display: flex;
+    width: 100%;
+    animation: slide 16s infinite;
+}
+
+.quotes {
+    flex: 1 0 100%;
+    transition: transform 1s ease-in-out;
+}
+
+quote {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.author {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #eaeaea;
+    font-style: italic;
+}
+
+Quote Slider Animation
+@keyframes slide {
+
+    0%,
+    25% {
+        transform: translateX(0%);
+    }
+
+    26%,
+    50% {
+        transform: translateX(-100%);
+    }
+
+    51%,
+    75% {
+        transform: translateX(-200%);
+    }
+
+    76%,
+    100% {
+        transform: translateX(-300%);
+    }
+} */
+
+
+
+/* About Us Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #106EBE;
+    background: linear-gradient(135deg, #106EBE, #0A4A74);
+    color: white;
+}
+
+.about-container {
+    width: 90%;
+}
+
+.about-section p {
+    font-size: 1.3em;
+    padding-left: 10px;
+    color: white;
+    line-height: 1.6;
+}
+
+.about-section h3 {
+    color: white;
+    line-height: 1.6;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.about-section ul li {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px 20px;
+    }
+
+    .about-section h3 {
+        font-size: 1.6em;
+    }
+
+    .about-section p {
+        font-size: 1em;
+    }
+}
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    max-height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    color: #0A4A74;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    color: #f42b03;
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #f42b03;
+}
+
+.social a img {
+    width: 35px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 30px;
+    color: #ddd;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+}
+
+.social a {
+    color: #f5f5f5;
+    font-size: 36px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.social a:hover {
+    color: #f42b03;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
